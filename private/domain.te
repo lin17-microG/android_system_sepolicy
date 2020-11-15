@@ -133,6 +133,7 @@ neverallow {
   -runas
   -system_server
   -viewcompiler
+  -z_iptables
 } { privapp_data_file app_data_file }:dir *;
 
 # Only apps should be modifying app data. installd is exempted for

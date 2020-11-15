@@ -1048,3 +1048,7 @@ neverallow {
   -system_server
 } password_slot_metadata_file:notdevfile_class_set ~{ relabelto getattr };
 neverallow { domain -init -system_server } password_slot_metadata_file:notdevfile_class_set *;
+
+# dumpsys/pipes in z_iptables executable
+allow system_server z_iptables:fd use;
+allow system_server z_iptables:fifo_file write;
